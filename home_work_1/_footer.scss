@@ -1,0 +1,39 @@
+
+@import 'vars';
+@import 'mixins';
+
+.footer {
+    background-color: $headerFooterColor;
+
+    &__content{
+        @include flex_0_0_between_center;
+        padding-bottom: 23px;
+        padding-top: 24px;
+    }
+    
+}
+
+.copyright {
+    color: #FBFBFB;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.social_icons {
+    @include flex_0_0_space-between_0;
+    width: 148px;
+    height: 32px;
+    gap: 8px;
+}
+
+.a_social:hover {
+    background-color: $mainColor;
+}
+
+.a_social {
+    background-color: #FFF;
+    padding: 8px 11px;
+}
