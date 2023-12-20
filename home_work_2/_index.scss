@@ -1,0 +1,197 @@
+@import 'vars';
+@import 'mixins';
+
+
+.title_head {
+    display: flex;
+    background-color: #F1E4E6;
+    padding-left: calc(50% - $contentWitdhSite/2);
+    padding-right: calc(50% - $contentWitdhSite/2);
+    &__text__content{
+        border-left: 12px solid $mainColor;
+        margin-top: 290px;
+        margin-bottom: 381px;
+        padding-left: 16px;
+    }
+    &__text__content_text{
+        @include flex_column_0_0_0;
+    }
+    &__text__content_text h1{
+        @include font_family_lato(#222, 48px, 900);
+    }
+    &__text__content_text p{
+        @include font_family_lato(#222, 32px, 700);
+    }
+    &__text__content__text__pink{
+        padding-left: 10px;
+        @include font_family_lato($mainColor, 32px, 700);
+    }
+}
+
+
+
+.offer {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    grid-template-rows: 260px 180px;
+    gap: 30px;
+    padding-top: 64px;
+    padding-bottom: 96px;
+    &_category{
+        position: relative;
+        background: rgba(33, 22, 22, 0.70);
+    }
+    &_category_large{
+        grid-column: 1 / -1;
+        position: relative;
+        background: rgba(33, 22, 22, 0.70);
+    }
+    &_img{
+        width: 100%;
+        position: inherit;
+        z-index: -1;
+    }
+    &_img__large{
+        width: 100%;
+        position: inherit;
+        z-index: -1;
+    }
+    &_img__small{
+        display: none;
+    }
+    &_content{
+        @include flex_column_0_center_center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &_content p{
+        @include font_family_lato(#FFF, 16px, 400);
+    }
+    &_content h3{
+        @include font_family_lato($mainColor, 24px, 700);
+    }
+}
+
+
+.main_title {
+    @include font_family_lato(#222, 30px, 400);
+    text-align: center;
+    padding-bottom: 6px;
+}
+
+.main_text {
+    @include font_family_lato(#9F9F9F, 14px, 400);
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+.shop_boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
+    gap: 30px;
+    padding-bottom: 48px;
+    & h2{
+        @include font_family_lato(#000, 13px, 400);
+        padding-left: 16px;
+    }
+
+    & h3{
+        @include font_family_lato($mainColor, 16px, 400);
+        padding-left: 16px;
+        padding-bottom: 24px;
+    }
+    & p{
+        @include font_family_lato(#5D5D5D, 14px, 300);
+        padding: 16px 16px;
+    }    
+    
+}
+
+.shop_box {
+    @include flex_column_0_0_0;
+    background-color: #F8F8F8;
+
+    &__img{
+        margin-bottom: 24px;
+        position: relative;
+    }
+
+    &__img__cart {
+        @include flex_0_0_center_center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(58, 56, 56, 0.86);
+        transition: height 0.2s ease-in;
+    }
+
+    &__cart__btn{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 11px;
+        padding: 14px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: #FFF;
+        border: solid 1px #FFFFFF;
+    }
+}
+
+
+.shop_box:hover .shop_box__img__cart {
+    height: 100%
+}
+
+.shop_box:hover .shop_box__cart__btn {
+    display: flex;
+}
+
+.button_p {
+    display: flex;
+    & a{
+        @include font_family_lato(#cd5364, 16px, 400);
+        line-height: 19px;
+        text-align: center;
+        padding: 15px 39px;
+        margin: 48px auto 60px auto;
+        border: solid 1px #cd5364;
+        transition: color 0.25s linear, background-color 0.25s linear;
+        text-decoration: none;
+    }
+}
+
+.button_p:hover a {
+    color: #FFFFFF;
+    background: #cd5364;
+}
+
+.benefit {
+    background-color: $headerFooterColor;
+    @include flex_0_0_0_center(30px);
+    padding-top: 103px;
+    padding-bottom: 103px;
+
+    &_card{
+        @include flex_column_0_0_center;
+    }
+
+    &_card h3{
+        @include font_family_lato(#FBFBFB, 20px, 400);
+        padding-bottom: 16px;
+    }
+    &_card p{
+        @include font_family_lato(#FBFBFB, 14px, 4300);
+    }
+
+    &__img{
+        padding-bottom: 20px;
+    }
+}
+

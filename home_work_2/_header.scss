@@ -1,0 +1,35 @@
+
+@import 'vars';
+@import 'mixins';
+
+.header {
+    @include flex_0_0_between_center;
+    background-color: $headerFooterColor;
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    &_left{
+        @include flex_0_0_0_center(33px);
+    }
+
+    &_right{
+        @include flex_0_0_0_center(33px);
+    }
+    
+    &_right__icolink__cart:after{
+        content: '5';
+        background-color: $mainColor;
+        top: 5px;
+        position: absolute;
+        padding: 10px;
+        margin-left: -10px;
+        border-radius: 30px;
+        @include font_family_lato(#FFF, 12px, 400);
+
+    }
+    
+}
+
+.header a:hover svg path {
+    fill: $mainColor;
+}
