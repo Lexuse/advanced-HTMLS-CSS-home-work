@@ -145,6 +145,7 @@
   background-color: #222;
   padding-top: 18px;
   padding-bottom: 18px;
+  position: relative;
 }
 .header_left {
   display: flex;
@@ -174,6 +175,80 @@
 
 .header a:hover svg path {
   fill: #F16D7F;
+}
+
+.header label:hover path {
+  fill: #F16D7F;
+}
+
+#burger {
+  position: absolute;
+  left: -99999px;
+  visibility: hidden;
+}
+#burger:checked ~ .menu {
+  right: -232px;
+}
+
+.menu {
+  box-sizing: border-box;
+  width: 232px;
+  z-index: 10;
+  position: absolute;
+  top: 78px;
+  right: 0px;
+  transition: right 0.3s;
+  background-color: #fff;
+  padding: 0px 0px 16px 16px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.menu h5 {
+  padding-top: 37px;
+  color: #000;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  line-height: 17px;
+  position: relative;
+}
+.menu__close-icon {
+  position: absolute;
+  right: 17px;
+  top: 16px;
+}
+.menu__item {
+  margin-top: 16px;
+}
+.menu__head {
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 8px 11px 11px 11px;
+}
+.menu__item[open] .menu__head {
+  color: #F16D7F;
+}
+.menu__link-box {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 12px 21px;
+}
+.menu__link {
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 14pxm;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.menu__link:hover {
+  color: #F16D7F;
 }
 
 .title_head {
