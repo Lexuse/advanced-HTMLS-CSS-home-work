@@ -482,17 +482,24 @@ summary::-webkit-details-marker {
 }
 
 .filter-sort {
+  display: flex;
   height: 132px;
+  padding-top: 39px;
+  box-sizing: border-box;
   position: relative;
+  gap: 30px;
 }
 
 .filter {
-  padding: 13px 16px 16px;
-  top: 39px;
+  padding-top: 13px;
   box-sizing: border-box;
   width: 360px;
-  position: absolute;
   z-index: 10;
+  position: relative;
+}
+.filter__content {
+  background-color: #fff;
+  padding: 0px 16px 16px 16px;
 }
 .filter[open] {
   background: #FFF;
@@ -508,6 +515,7 @@ summary::-webkit-details-marker {
   display: flex;
   align-items: center;
   gap: 11px;
+  padding-left: 16px;
 }
 .filter__heading {
   color: #000;
@@ -551,6 +559,44 @@ summary::-webkit-details-marker {
 }
 .filter__link:hover {
   color: #F16D7F;
+}
+
+.sort {
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  z-index: 10;
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.sort__details {
+  position: relative;
+}
+.sort__summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sort__box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  left: -9px;
+  top: 20px;
+  background: #FFF;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+  padding: 7px 30px 11px 9px;
+}
+.sort__check {
+  display: flex;
+  align-items: center;
+  gap: 9px;
 }
 
 .pagination {
