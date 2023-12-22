@@ -1,0 +1,120 @@
+@import 'vars';
+@import 'mixins';
+
+.carousel {
+    position: relative;
+    display: flex;
+    background-color: #F7F7F7;
+    height: 777px;
+    justify-content: center;
+    margin-bottom: 664px;
+
+    & img {
+        width: 597px;
+        height: 724px;
+    }
+
+    & button {
+        width: 47px;
+        height: 47px;
+        fill: rgba(42, 42, 42, 0.15);
+        border: none;
+        background-color: rgba(42, 42, 42, 0.15);
+        ;
+    }
+
+    &__button-left {
+        position: absolute;
+        left: 0px;
+        top: 365px;
+
+    }
+
+    &__button-right {
+        position: absolute;
+        right: 0px;
+        top: 365px;
+    }
+
+    & button:hover path {
+        fill: $mainColor;
+    }
+
+    &__description {        
+        @include flex_column_0_0_center;
+        position: absolute;
+        width: 1141px;
+        height: 601px;
+        top: 701px;
+        background-color: #fff;
+        border: #EAEAEA solid 1px;
+
+        & h4 {
+            padding-top: 65px;
+            padding-bottom: 12px;
+            @include font_family_lato($mainColor, 14px, 300);
+        }
+
+        & h3 {
+            padding-top: 12px;
+            padding-bottom: 48px;
+            @include font_family_lato(#4D4D4D, 18px, 300);
+        }
+
+        & p {
+            text-align: center;
+            @include font_family_lato(#5E5E5E, 14px, 300);
+            width: 555px;
+            padding-bottom: 32px;
+        }
+
+        & h2 {
+            padding-bottom: 65px;
+            @include font_family_lato($mainColor, 24px, 300);
+        }
+
+        & a {
+            @include font_family_lato(#F26376, 16px, 400);
+            padding-left: 22px;
+        }
+
+    }
+
+    &__separator-pink {
+        width: 63px;
+        height: 3px;
+        background-color: $mainColor;
+    }
+
+    &__separator-brown {
+        width: 641px;
+        height: 1px;
+        margin-bottom: 53px;
+        background-color: #EAEAEA;
+    }
+
+    &__sort {
+        padding-bottom: 48px;
+    }
+
+    &__add-to-cart-button {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: 212px;
+        height: 48px;
+        border: $mainColor solid 1px;
+        padding-left: 24px;
+    }
+
+    &__add-to-cart-button:hover path{
+        fill: white;
+    }
+    &__add-to-cart-button:hover {
+        background-color: $mainColor;
+        & a{
+            color: #F7F7F7;
+        }
+    }
+
+}

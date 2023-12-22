@@ -10,7 +10,7 @@
     text-decoration: none;
 }
 
-.main {
+.base {
     position: relative;
     overflow: hidden;
 }
@@ -18,7 +18,7 @@
 .center {
     padding-left: calc(50% - $contentWitdh/2);
     padding-right: calc(50% - $contentWitdh/2);
-}
+} 
 
 
 
